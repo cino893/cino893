@@ -84,6 +84,18 @@ h1 {
     text-align: left;
 }
 
+.content p a {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.content p a:hover {
+    color: #666;
+}
+
 .links {
     margin-top: 30px;
     display: flex;
