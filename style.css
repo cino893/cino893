@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 700px;
+    /* Szerszy akapit na desktopie */
     width: 100%;
     padding: 40px 20px;
     margin: 0 auto;
@@ -44,21 +45,36 @@ body {
     margin-bottom: 25px;
 }
 
-.profile-header .hero-image {
+.profile-header .profile-image {
     width: 100%;
     max-width: 500px;
-    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 25px;
+    border-radius: 50%;
+    /* Powrót do kółka */
+    margin: 0 auto 25px auto;
+    /* Wyśrodkowanie z odstępem na dole */
     display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Delikatny nowoczesny cień, dodaje uroku */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-header a {
+    display: inline-block;
+}
+
+.profile-header a:hover .profile-image {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 0 0 10px 0;
-    text-align: left;
+    text-align: center;
+    /* Powrót na środek dla lepszej prezencji profilu */
 }
 
 .content p {
@@ -123,24 +139,30 @@ h1 {
     .container {
         padding: 60px 20px 40px 20px;
     }
+
     .lang-switch {
         top: 15px;
         right: 15px;
     }
+
     h1 {
         font-size: 1.7rem;
     }
+
     .links {
         flex-direction: column;
         width: 100%;
     }
+
     .links a {
         text-align: center;
         width: 100%;
         box-sizing: border-box;
     }
+
     .pgp-block pre {
-        font-size: 0.75rem; /* Slightly smaller on very narrow screens */
+        font-size: 0.75rem;
+        /* Slightly smaller on very narrow screens */
         padding: 10px;
     }
 }
